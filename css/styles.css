@@ -437,6 +437,7 @@ border-radius: 0 0 4px 4px;
     background-color: #2e2f42;
     padding-top: 100px;
     padding-bottom: 100px;
+    display: flex;
 
 }
 .footer-logo {
@@ -444,6 +445,35 @@ border-radius: 0 0 4px 4px;
     margin-bottom: 16px;
 }
 
+.container-footer-card {
+    align-items: baseline;
+    
+}
 
+.footer-soc-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
 
+.footer-soc {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+    
 
+.container-footer-logo {
+    display: flex;
+    margin-right: 120px;
+}
+.footer-soc-logo:hover,
+.footer-soc-logo:focus {
+    background-color: #31d0aa;
+}
