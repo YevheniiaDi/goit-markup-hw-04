@@ -25,6 +25,7 @@ a {
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -79,12 +80,32 @@ a {
     color: #2e2f42;
     padding: 24px 0;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                
+}
+
+.nav-link.current {
+    position: relative;
+}
+
+.nav-link.current::after {
+    content:"";
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: #404bbf;
 
 }
+
+
 .nav-link:hover,
 .nav-link:focus, 
 .contacts-link:hover,
-.contacts-link:focus {
+.contacts-link:focus,
+.nav-link.current {
     color: #404bbf;
 }
 
@@ -103,7 +124,7 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .title-container {
 
@@ -111,9 +132,16 @@ a {
 
 .title-page {
     background-color: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
     display: flex;
     width: 100%;
     padding: 188px 0 188px;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
 
 }
 .text-page {
@@ -164,8 +192,7 @@ a {
 }
 
 .advantages-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    
 }
 .visually-hidden {
     position: absolute;
@@ -194,6 +221,18 @@ a {
 
 }
 
+.advantages-item-card {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    align-items: center;
+    background: #f4f4fd;
+}
+
 .advantages-subtitle {
     font-weight: 500;
     font-size: 20px;
@@ -218,8 +257,7 @@ a {
 }
 
 .team-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+
 
 }
 .team-title {
@@ -232,7 +270,6 @@ a {
     color: #2e2f42;
     text-transform: capitalize;
     display: block;
-    padding-top: 120px;
     border-radius: 0 0 4px 4px;
 }
 
@@ -240,7 +277,6 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    padding-bottom: 120px;
    }
 
 
@@ -285,6 +321,42 @@ border-radius: 0 0 4px 4px;
     text-transform: capitalize;
 }
 
+.soc-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.soc-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin: 8px 16px;
+}
+
+.soc-icon {
+    fill: #f4f4fd
+}
+
+.soc-item {
+    width: 100%;
+    height: 100%;
+}
+
+.soc-link:hover {
+    background-color: #404bbf;
+}
+.soc-link:focus {
+    background-color: #404bbf;
+}
+
 .our-portfolio {
     width: 100%;
     padding-top: 120px;
@@ -292,8 +364,7 @@ border-radius: 0 0 4px 4px;
 }
 
 .portfolio-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+ 
 }
 
 .portfolio-img {
@@ -360,7 +431,7 @@ border-radius: 0 0 4px 4px;
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
-    margin-top: 16px;
+    
 }
 .page-footer {
     background-color: #2e2f42;
